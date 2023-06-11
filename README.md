@@ -108,7 +108,7 @@ No terminal, execute o seguinte comando para iniciar o servidor:
 node app.js
 ```
 
-Acesse a rota `/` e você verá os seus dados sendo exibidos à partir de um Template Engine.
+Acesse a rota ```/``` e você verá os seus dados sendo exibidos à partir de um Template Engine.
 
 Agora, acrescente o seguinte código ao arquivo **taskController.js** antes de exporta-lo:
 
@@ -119,4 +119,6 @@ router.get("/tasks", (req, res) => {
 });
 ```
 
-Acesse a rota `/tasks` e você terá um JSON como resposta, assim como no padrão REST.
+Reinicie o servidor apertando ```control+C``` no terminal e digitando novamente ```node app.js```.
+
+Acesse a rota ```/tasks``` e você terá um JSON como resposta, assim como no padrão REST.
