@@ -67,6 +67,7 @@ const makeDinner = new Task(
   "Make Dinner",
   "Make a dinner for my love"
 );
+
 const doLaundry = new Task("laundry", "Do Laundry", "Do the laundry until 8pm");
 
 const tasks = [makeDinner, doLaundry];
