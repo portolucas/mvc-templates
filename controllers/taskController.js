@@ -19,11 +19,4 @@ router.get("/", (req, res) => {
   res.render("index", { tasks });
 });
 
-// Rota para adicionar uma nova tarefa
-router.post("/add", (req, res) => {
-  const { title, description } = req.body;
-  createTask(title, description); // Cria uma nova tarefa no Model
-  res.redirect("/");
-});
-
 module.exports = router;
