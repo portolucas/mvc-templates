@@ -58,19 +58,13 @@ Dentro da pasta controllers, crie o arquivo **taskController.js**
 
 ```
 cconst express = require("express");
-
 const router = express.Router();
-
 const Task = require("../models/task");
 
 // Simulando um banco de dados
-
 const makeDinner = new Task(
-
   "dinner",
-
   "Make Dinner",
-
   "Make a dinner for my love"
 );
 const doLaundry = new Task("laundry", "Do Laundry", "Do the laundry until 8pm");
@@ -78,11 +72,8 @@ const doLaundry = new Task("laundry", "Do Laundry", "Do the laundry until 8pm");
 const tasks = [makeDinner, doLaundry];
 
 // Rota para exibir a lista de tarefas utilizando o Template Engine
-
 router.get("/", (req, res) => {
-
   res.render("index", { tasks });
-
 });
 
 module.exports  =  router;
@@ -92,29 +83,21 @@ Finalmente, crie o arquivo **app.js** na raiz do projeto
 
 ```
 const  express  =  require('express');
-
 const  app  =  express();
-
 const  taskController  =  require('./controllers/taskController');
 
 // Configuração do template engine EJS
-
 app.set('view engine',  'ejs');
 
 // Middleware para processar o corpo das requisições
-
 app.use(express.urlencoded({  extended:  true  }));
 
 // Rota principal
-
 app.use('/',  taskController);
 
 // Iniciar o servidor
-
 app.listen(3000,  ()  =>  {
-
 console.log('Servidor iniciado na porta 3000');
-
 });
 ```
 
@@ -130,11 +113,8 @@ Agora, acrescente o seguinte código ao arquivo **taskController.js** antes de e
 
 ```
 // Rota para exibir a lista de tarefas utilizando o JSON
-
 router.get("/tasks", (req, res) => {
-
   res.json(tasks);
-
 });
 ```
 
