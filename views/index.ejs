@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Lista de Tarefas</title>
+</head>
+<body>
+  <h1>Minhas Tarefas</h1>
+  <ul>
+    <% tasks.forEach((task) => { %>
+    <li><%= task.title %></li>
+    <% }); %>
+  </ul>
+</body>
+</html>
