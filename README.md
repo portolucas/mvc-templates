@@ -8,7 +8,7 @@ Vamos começar pela abordagem MVC com Templates
 Crie um projeto NodeJS com o seguinte comando:
 
 ```
-node init -y
+npm init -y
 ```
 
 Instale as dependências:
@@ -57,7 +57,7 @@ Dentro da pasta views, crie o arquivo **index.ejs**
 Dentro da pasta controllers, crie o arquivo **taskController.js**
 
 ```
-cconst express = require("express");
+const express = require("express");
 const router = express.Router();
 const Task = require("../models/task");
 
